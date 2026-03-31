@@ -27,9 +27,9 @@
         }
         else {
             try {
-                $pdo = new PDO($attr, $db_user, $db_pwd, $options);
+                $pdo = new PDO($attr, $db_user, $db_pass, $options);
 
-                $query = "SELECT * FROM users WHERE email = :email";
+                $query = "SELECT * FROM Users WHERE email = :email";
                 $stmt = $pdo->prepare($query);
                 $stmt->execute(["email" => $email]);
 
@@ -39,7 +39,7 @@
                 else {
                     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-                    $insertQuery = "INSERT INTO users (email, nickname, password, avatar_path, dob)
+                    $insertQuery = "INSERT INTO Users (email, nickName, password, avatar, DOB)
                                     VALUES (:email, :nickname, :password, :avatar_path, :dob)";
                     $insertStmt = $pdo->prepare($insertQuery);
                     $insertStmt->execute([
@@ -55,7 +55,7 @@
                 }
             }
             catch (PDOException $e) {
-                $generalError = "Database error occurred.";
+                $generalError = "Internal Error: " . $e->getMessage();
             }
         }
     }
@@ -65,7 +65,7 @@
 
  <head>
     <title>Gaming Hub</title>
-    <link rel="stylesheet" type="text/css" href="stylea2.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
  </head>
 
     <body>
@@ -104,7 +104,7 @@
                        <input type="password" id="cpswd" name="cpswd"/>
 
                        <label for="avatar">Avatar Path:</label>
-                       <input type="text" id="avatar" name="avatar"
+                       <input type="file" id="avatar" name="avatar"
                               value="<?php echo htmlspecialchars($_POST['avatar'] ?? ''); ?>" />
 
                        <label for="dob">Date of Birth:</label>

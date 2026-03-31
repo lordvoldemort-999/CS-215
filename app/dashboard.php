@@ -15,7 +15,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gaming Hub - Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="stylea2.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body id="loggedin-page" class="dashboard-page">
@@ -51,15 +51,15 @@
                         <div class="carousel">
                             <div class="cards">
                                 <div class="game-card">
-                                    <img src="assignment2images/chess.jpeg" alt="Chess game" />
+                                    <img src="images/chess.jpeg" alt="Chess game" />
                                     <p class="game-title">Chess</p>
                                 </div>
                                 <div class="game-card">
-                                    <img src="assignment2images/checkers.jpeg" alt="Checkers game" />
+                                    <img src="images/checkers.jpeg" alt="Checkers game" />
                                     <p class="game-title">Checkers</p>
                                 </div>
                                 <div class="game-card">
-                                    <img src="assignment2images/tictactoe.png" alt="Tic Tac Toe game" />
+                                    <img src="images/tictactoe.png" alt="Tic Tac Toe game" />
                                     <p class="game-title">Tic Tac Toe</p>
                                 </div>
                             </div>
@@ -71,11 +71,11 @@
                         <div class="carousel">
                             <div class="cards">
                                 <div class="game-card">
-                                    <img src="assignment2images/chess.jpeg" alt="Chess game" />
+                                    <img src="images/chess.jpeg" alt="Chess game" />
                                     <p class="game-title">Chess</p>
                                 </div>
                                 <div class="game-card">
-                                    <img src="assignment2images/checkers.jpeg" alt="Checkers game" />
+                                    <img src="images/checkers.jpeg" alt="Checkers game" />
                                     <p class="game-title">Checkers</p>
                                 </div>
                             </div>
@@ -87,11 +87,11 @@
                         <div class="carousel">
                             <div class="cards">
                                 <div class="game-card">
-                                    <img src="assignment2images/connect4.jpeg" alt="Connect 4 game" />
+                                    <img src="images/connect4.jpeg" alt="Connect 4 game" />
                                     <p class="game-title">Connect 4</p>
                                 </div>
                                 <div class="game-card">
-                                    <img src="assignment2images/memorygame.png" alt="Memory game" />
+                                    <img src="images/memorygame.png" alt="Memory game" />
                                     <p class="game-title">Memory</p>
                                 </div>
                             </div>

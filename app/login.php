@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("db.php");
+    require_once("db.php"); 
 
     $generalError = "";
 
@@ -14,10 +14,10 @@
         }
         else {
             try {
-                $pdo = new PDO($attr, $db_user, $db_pwd, $options);
+                $pdo = new PDO($attr, $db_user, $db_pass, $options);
 
                 // NOTE: using email as username (since signup uses email)
-                $query = "SELECT * FROM users WHERE email = :email";
+                $query = "SELECT * FROM Users WHERE email = :email";
                 $stmt = $pdo->prepare($query);
                 $stmt->execute(["email" => $username]);
 
@@ -26,30 +26,30 @@
                 if ($user && password_verify($password, $user["password"])) {
 
                     // STORE SESSION DATA
-                    $_SESSION["user_id"] = $user["user_id"];
+                    $_SESSION["user_id"] = $user["User_ID"];
                     $_SESSION["email"] = $user["email"];
-                    $_SESSION["nickname"] = $user["nickname"];
+                    $_SESSION["nickname"] = $user["nickName"];
 
                     // Redirect to dashboard
                     header("Location: dashboard.php");
                     exit();
-                }
-                else {
-                    $generalError = "Invalid login credentials.";
+                } else {
+                    $generalError = "Invalid email or password";
                 }
             }
             catch (PDOException $e) {
-                $generalError = "Database error occurred.";
+                $generalError = "Internal Error: " . $e->getMessage();
             }
         }
     }
 ?>
+
 <!DOCTYPE html>
 <html>
 
  <head>
     <title> Gaming Hub </title>
-    <link rel="stylesheet" type="text/css" href="stylea2.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
  </head>
 
     <body>
