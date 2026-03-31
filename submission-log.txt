@@ -11,7 +11,7 @@ Name: Abraham Omoregie
 Student Number: 200507536
 
 Web Application URL:
-http://www.webdev.cs.uregina.ca/~aoo988/GAMING-CENTER/app/login.php
+http://www.webdev.cs.uregina.ca/~aoo988/gaming-center/app/login.php
 
 Files:
 
