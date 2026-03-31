@@ -1,0 +1,40 @@
+Course: CS 215
+Assignment #5: Group 8
+
+Name: Sheenum Goyal
+Student Number: 200440452
+
+Name: Joel Kofi Awuku Sarpong
+Student Number: 200512342
+
+Name: Abraham Omoregie
+Student Number: 200507536
+
+Web Application URL:
+http://www.webdev.cs.uregina.ca/~aoo988/GAMING-CENTER/app/login.php
+
+Files:
+
+style.css
+- Single shared external stylesheet used by all pages.
+
+signup.php
+- Landing page where new users can create an account.
+
+login.php
+- Login page for existing users.
+
+logout.php
+- Logout users.
+
+dashboard.php
+- Home page/dashboard displaying available games.
+
+userinfo.php
+- Page for viewing and updating user information.
+
+db.php
+- Link to database.
+
+submission_log.txt
+- This file describing submission contents.
